@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Nusantara - Beranda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            dark: '#1F2937'
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-dark text-gray-800 dark:text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-primary text-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+      <h1 class="text-2xl font-bold">Explore Nusantara</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="hover:underline">Beranda</a>
+        <a href="#destinasi" class="hover:underline">Destinasi</a>
+        <a href="/kontak.html" class="hover:underline">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-50 dark:bg-gray-700 text-center py-16 px-4">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-4">Jelajahi Keindahan Nusantara</h2>
+    <p class="max-w-xl mx-auto text-gray-600 dark:text-gray-300 mb-6">Temukan pesona budaya, wisata, dan alam Indonesia dalam satu platform interaktif.</p>
+    <a href="#destinasi" class="bg-primary hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition duration-300">Lihat Destinasi</a>
+  </section>
+
+  <!-- Popular Destinations -->
+  <section id="destinasi" class="py-14 px-4 max-w-6xl mx-auto">
+    <h3 class="text-xl font-bold mb-8 text-center text-primary">Destinasi Populer</h3>
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <!-- Bali -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="https://source.unsplash.com/600x400/?bali" alt="Bali" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold text-lg">Bali</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Pulau Dewata yang terkenal dengan pantainya dan budayanya.</p>
+        </div>
+      </div>
+      <!-- Yogyakarta -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="https://source.unsplash.com/600x400/?yogyakarta" alt="Yogyakarta" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold text-lg">Yogyakarta</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Kota budaya dan sejarah yang menawan hati para pelancong.</p>
+        </div>
+      </div>
+      <!-- Lombok -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="https://source.unsplash.com/600x400/?lombok" alt="Lombok" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold text-lg">Lombok</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Destinasi eksotis dengan gunung dan laut yang memukau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-20 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-4">Jelajahi Keindahan Indonesia</h2>
+    <p class="text-gray-600 mb-6">Temukan destinasi wisata terbaik di seluruh penjuru nusantara.</p>
+    <a href="destinasi.html"
+      class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+      Lihat Tempat Wisata
+    </a>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="kontak" class="bg-blue-100 dark:bg-gray-900 text-center py-12 px-4">
+    <h3 class="text-xl font-bold text-primary mb-4">Hubungi Kami</h3>
+    <p class="text-gray-700 dark:text-gray-300 mb-4">Ingin tahu lebih banyak? Kirimkan pesan ke tim kami.</p>
+    <a href="mailto:info@nusantara.com" class="inline-block bg-primary hover:bg-blue-800 text-white px-5 py-2 rounded-full transition">Email Kami</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-5">
+    <p>&copy; 2025 Explore Nusantara. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>
