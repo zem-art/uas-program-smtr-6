@@ -7,9 +7,21 @@ const router = Router();
 
 // Ambil semua destinasi
 router.get('/', async (req, res) => {
-  const destinations = await prisma.destination.findMany();
-  res.json(destinations);
+  const destinations = await prisma.destination.findMany({
+    include: {
+      images: true, // Join table image
+    }
+  });
+
+  // Tambahkan `image` utama (contoh: ambil gambar pertama)
+  const formatted = destinations.map(dest => ({
+    ...dest,
+    image: dest.images[0]?.url || null // ambil gambar pertama jika ada
+  }));
+
+  res.json(formatted);
 });
+
 
 // Ambil satu destinasi berdasarkan ID
 router.get('/:id', async (req, res) => {

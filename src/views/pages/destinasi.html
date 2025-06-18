@@ -29,19 +29,24 @@
             return;
           }
 
-          container.innerHTML = data.map(d => `
-            <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-              <img src="${d.image || 'https://source.unsplash.com/800x250/?indonesia'}"
-                  alt="${d.name}" class="w-full h-40 object-cover">
-              <div class="p-4">
-                <h3 class="text-lg font-bold text-gray-800">${d.name}</h3>
-                <p class="text-sm text-gray-600">📍 ${d.location}</p>
-                <p class="text-sm text-gray-600">🌤️ ${d.climate}</p>
-                <p class="text-sm mt-2 text-gray-700">${d.description.length > 100 ? `${d.description.substring(0,100)}...` : d.description}</p>
-                <a href="/detail/destination/${d.id}" class="inline-block mt-3 text-primary font-medium hover:underline">Lihat Detail</a>
+          container.innerHTML = data.map(d => {
+          // console.log('Image:', d); // ✅ Pindahkan ke dalam sini
+            return `
+              <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                <img src="${d.image || 'https://placehold.co/300x200'}"
+                    alt="${d.name}" class="w-full h-40 object-cover">
+                <div class="p-4">
+                  <h3 class="text-lg font-bold text-gray-800">${d.name}</h3>
+                  <p class="text-sm text-gray-600">📍 ${d.location}</p>
+                  <p class="text-sm text-gray-600">🌤️ ${d.climate}</p>
+                  <p class="text-sm mt-2 text-gray-700">
+                    ${d.description.length > 100 ? `${d.description.substring(0, 100)}...` : d.description}
+                  </p>
+                  <a href="/detail/destination/${d.id}" class="inline-block mt-3 text-primary font-medium hover:underline">Lihat Detail</a>
+                </div>
               </div>
-            </div>
-          `).join('');
+            `;
+          }).join('');
         })
         .catch(error => {
           document.getElementById('loading').innerText = 'Gagal memuat data destinasi.';

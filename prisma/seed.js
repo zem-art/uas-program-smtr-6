@@ -138,68 +138,71 @@ async function main() {
 
   await prisma.image.createMany({
     data: [
-      { url: 'https://source.unsplash.com/800x600/?bali,beach', destinationId: 1 },
-      { url: 'https://source.unsplash.com/800x600/?bali,culture', destinationId: 1 },
+      { url: '/img/bali_01.jpg', destinationId: 1 },
+      { url: '/img/bali_02.wepg', destinationId: 1 },
+      { url: '/img/bali_03.jpg', destinationId: 1 },
 
-      { url: 'https://source.unsplash.com/800x600/?yogyakarta,temple', destinationId: 2 },
-      { url: 'https://source.unsplash.com/800x600/?yogyakarta,batik', destinationId: 2 },
+      { url: '/img/aceh_01.jpeg', destinationId: 2 },
+      { url: '/img/bali_02.wepg', destinationId: 2 },
+      { url: '/img/bali_03.jpg', destinationId: 2 },
+      { url: '/img/bali_04.jpg', destinationId: 2 },
 
-      { url: 'https://source.unsplash.com/800x600/?rajaampat,island', destinationId: 3 },
-      { url: 'https://source.unsplash.com/800x600/?rajaampat,underwater', destinationId: 3 },
+      { url: '/img/banyuwangi_01.jpg', destinationId: 3 },
+      { url: '/img/banyuwangi_02.jpg', destinationId: 3 },
 
-      { url: 'https://source.unsplash.com/800x600/?lombok,beach', destinationId: 4 },
-      { url: 'https://source.unsplash.com/800x600/?rinjani,mountain', destinationId: 4 },
+      { url: '/img/bdg_01.jpg', destinationId: 4 },
+      { url: '/img/bdg_02.jpg', destinationId: 4 },
 
-      { url: 'https://source.unsplash.com/800x600/?labuanbajo,komodo', destinationId: 5 },
-      { url: 'https://source.unsplash.com/800x600/?labuanbajo,padar', destinationId: 5 },
+      { url: '/img/belitung_01.jpeg', destinationId: 5 },
+      { url: '/img/belitung_02.jpeg', destinationId: 5 },
 
-      { url: 'https://source.unsplash.com/800x600/?bandung,nature', destinationId: 6 },
-      { url: 'https://source.unsplash.com/800x600/?bandung,cafe', destinationId: 6 },
+      { url: '/img/bromo_01.jpg', destinationId: 6 },
+      { url: '/img/bromo_02.wepg', destinationId: 6 },
 
-      { url: 'https://source.unsplash.com/800x600/?danautoba,lake', destinationId: 7 },
-      { url: 'https://source.unsplash.com/800x600/?samosir,island', destinationId: 7 },
+      { url: '/img/bali_01.jpg', destinationId: 7 },
+      { url: '/img/bali_02.wepg', destinationId: 7 },
 
-      { url: 'https://source.unsplash.com/800x600/?bromo,volcano', destinationId: 8 },
-      { url: 'https://source.unsplash.com/800x600/?bromo,sunrise', destinationId: 8 },
+      { url: '/img/bromo_01.jpg', destinationId: 8 },
+      { url: '/img/bromo_02.wepg', destinationId: 8 },
 
-      { url: 'https://source.unsplash.com/800x600/?wakatobi,reef', destinationId: 9 },
-      { url: 'https://source.unsplash.com/800x600/?wakatobi,diving', destinationId: 9 },
+      { url: '/img/banyuwangi_01.jpg', destinationId: 9 },
+      { url: '/img/banyuwangi_02.jpg', destinationId: 9 },
 
-      { url: 'https://source.unsplash.com/800x600/?toraja,culture', destinationId: 10 },
-      { url: 'https://source.unsplash.com/800x600/?toraja,tradition', destinationId: 10 },
+      { url: '/img/belitung_01.jpeg', destinationId: 10 },
+      { url: '/img/belitung_02.jpeg', destinationId: 10 },
 
-      { url: 'https://source.unsplash.com/800x600/?belitung,beach', destinationId: 11 },
-      { url: 'https://source.unsplash.com/800x600/?belitung,granite', destinationId: 11 },
+      { url: '/img/belitung_01.jpeg', destinationId: 11 },
+      { url: '/img/belitung_02.jpeg', destinationId: 11 },
 
-      { url: 'https://source.unsplash.com/800x600/?derawan,island', destinationId: 12 },
-      { url: 'https://source.unsplash.com/800x600/?derawan,turtle', destinationId: 12 },
+      { url: '/img/bali_03.jpg', destinationId: 12 },
+      { url: '/img/bali_04.jpg', destinationId: 12 },
 
-      { url: 'https://source.unsplash.com/800x600/?ijen,bluefire', destinationId: 13 },
-      { url: 'https://source.unsplash.com/800x600/?ijen,crater', destinationId: 13 },
+      { url: '/img/bromo_01.jpg', destinationId: 13 },
+      { url: '/img/bromo_02.wepg', destinationId: 13 },
 
-      { url: 'https://source.unsplash.com/800x600/?manado,ocean', destinationId: 14 },
-      { url: 'https://source.unsplash.com/800x600/?bunaken,reef', destinationId: 14 },
+      { url: '/img/bdg_01.jpg', destinationId: 14 },
+      { url: '/img/bdg_02.jpg', destinationId: 14 },
 
-      { url: 'https://source.unsplash.com/800x600/?padang,beach', destinationId: 15 },
-      { url: 'https://source.unsplash.com/800x600/?padang,food', destinationId: 15 },
+      { url: '/img/bali_03.jpg', destinationId: 15 },
+      { url: '/img/bali_04.jpg', destinationId: 15 },
 
-      { url: 'https://source.unsplash.com/800x600/?bukittinggi,jamgadang', destinationId: 16 },
-      { url: 'https://source.unsplash.com/800x600/?bukittinggi,ngarai', destinationId: 16 },
+      { url: '/img/bali_01.jpg', destinationId: 16 },
+      { url: '/img/bali_02.wepg', destinationId: 16 },
 
-      { url: 'https://source.unsplash.com/800x600/?banyuwangi,pantai', destinationId: 17 },
-      { url: 'https://source.unsplash.com/800x600/?banyuwangi,kawahijen', destinationId: 17 },
+      { url: '/img/banyuwangi_01.jpg', destinationId: 17 },
+      { url: '/img/banyuwangi_02.jpg', destinationId: 17 },
 
-      { url: 'https://source.unsplash.com/800x600/?malang,waterfall', destinationId: 18 },
-      { url: 'https://source.unsplash.com/800x600/?malang,flowers', destinationId: 18 },
+      { url: '/img/bali_01.jpg', destinationId: 18 },
+      { url: '/img/bali_03.jpg', destinationId: 18 },
 
-      { url: 'https://source.unsplash.com/800x600/?makassar,losari', destinationId: 19 },
-      { url: 'https://source.unsplash.com/800x600/?makassar,rotterdam', destinationId: 19 },
+      { url: '/img/bdg_01.jpg', destinationId: 19 },
+      { url: '/img/bdg_02.jpg', destinationId: 19 },
 
-      { url: 'https://source.unsplash.com/800x600/?aceh,mosque', destinationId: 20 },
-      { url: 'https://source.unsplash.com/800x600/?aceh,tsunami', destinationId: 20 },
+      { url: '/img/aceh_01.jpeg', destinationId: 20 },
+      { url: '/img/bali_02.wepg', destinationId: 20 },
 
-      { url: 'https://source.unsplash.com/800x600/?karimunjawa,island', destinationId: 21 },
-      { url: 'https://source.unsplash.com/800x600/?karimunjawa,snorkeling', destinationId: 21 }
+      { url: '/img/bali_01.jpg', destinationId: 21 },
+      { url: '/img/bali_03.jpg', destinationId: 21 }
     ]
   });
 

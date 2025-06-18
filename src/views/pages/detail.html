@@ -28,6 +28,8 @@
         return res.json();
       })
       .then(data => {
+
+        console.log('Detail Data:', data); // Debugging log
         document.title = `Detail ${data.name}`;
         document.getElementById('dest-name').textContent = data.name;
         document.getElementById('dest-desc').textContent = data.description;
@@ -38,7 +40,7 @@
         if (Array.isArray(data.images)) {
           data.images.forEach(img => {
             const el = document.createElement('img');
-            el.src = img;
+            el.src = img.url;
             el.alt = data.name;
             el.className = 'rounded';
             imgContainer.appendChild(el);
