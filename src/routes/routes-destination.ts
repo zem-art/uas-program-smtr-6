@@ -14,10 +14,26 @@ router.get('/', async (req, res) => {
 // Ambil satu destinasi berdasarkan ID
 router.get('/:id', async (req, res) => {
   const id = parseInt(req.params.id);
-  const dest = await prisma.destination.findUnique({ where: { id } });
-  if (!dest) return res.status(404).json({ error: 'Destinasi tidak ditemukan' });
-  res.json(dest);
+
+  try {
+    const dest = await prisma.destination.findUnique({
+      where: { id },
+      include: {
+        images: true, // ← ambil semua gambar terkait
+      },
+    });
+
+    if (!dest) {
+      return res.status(404).json({ error: 'Destinasi tidak ditemukan' });
+    }
+
+    res.json(dest);
+  } catch (error) {
+    console.error('❌ Gagal mengambil destinasi:', error);
+    res.status(500).json({ error: 'Terjadi kesalahan pada server' });
+  }
 });
+
 
 // Tambah destinasi baru
 router.post('/', async (req, res) => {

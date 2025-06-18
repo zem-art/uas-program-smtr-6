@@ -1,10 +1,14 @@
-import express, { Request, Response } from 'express';
-import fs from 'fs/promises';
-import path from 'path';
 import cors from 'cors';
+import fs from 'fs/promises';
+import { fileURLToPath } from 'url'; // ← Tambahan
+import path, { dirname } from 'path';
+import express, { Request, Response } from 'express';
 import { logRequest } from './logs/logs-request';
 import destinationRoutes from './routes/routes-destination';
 import kontakRoutes from './routes/routes-kontak';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = 3000;
