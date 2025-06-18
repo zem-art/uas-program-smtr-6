@@ -51,11 +51,15 @@ app.get('/contact', async (_req: Request, res: Response) => {
   res.send(html);
 });
 
-app.get('/destinastion', async (_req: Request, res: Response) => {
+app.get('/destination', async (_req: Request, res: Response) => {
   const html = await renderPage(path.join(__dirname, 'views/pages/destinasi.html'));
   res.send(html);
 });
 
+app.get('/detail/destination/:id', async (_req: Request, res: Response) => {
+  const html = await renderPage(path.join(__dirname, 'views/pages/detail.html'));
+  res.send(html);
+});
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });

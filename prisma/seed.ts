@@ -4,6 +4,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
+  
   await prisma.destination.createMany({
   data: [
     {
@@ -133,7 +134,74 @@ async function main() {
       description: 'Karimunjawa adalah kepulauan di utara Jepara yang dikenal dengan pantai berpasir putih, laut biru jernih, dan biota laut yang kaya. Kepulauan ini cocok untuk aktivitas snorkeling, diving, dan berkemah, serta suasana tenang yang jauh dari keramaian kota.'
     }
   ]
-});
+  });
+
+  await prisma.image.createMany({
+    data: [
+      { url: 'https://source.unsplash.com/800x600/?bali,beach', destinationId: 1 },
+      { url: 'https://source.unsplash.com/800x600/?bali,culture', destinationId: 1 },
+
+      { url: 'https://source.unsplash.com/800x600/?yogyakarta,temple', destinationId: 2 },
+      { url: 'https://source.unsplash.com/800x600/?yogyakarta,batik', destinationId: 2 },
+
+      { url: 'https://source.unsplash.com/800x600/?rajaampat,island', destinationId: 3 },
+      { url: 'https://source.unsplash.com/800x600/?rajaampat,underwater', destinationId: 3 },
+
+      { url: 'https://source.unsplash.com/800x600/?lombok,beach', destinationId: 4 },
+      { url: 'https://source.unsplash.com/800x600/?rinjani,mountain', destinationId: 4 },
+
+      { url: 'https://source.unsplash.com/800x600/?labuanbajo,komodo', destinationId: 5 },
+      { url: 'https://source.unsplash.com/800x600/?labuanbajo,padar', destinationId: 5 },
+
+      { url: 'https://source.unsplash.com/800x600/?bandung,nature', destinationId: 6 },
+      { url: 'https://source.unsplash.com/800x600/?bandung,cafe', destinationId: 6 },
+
+      { url: 'https://source.unsplash.com/800x600/?danautoba,lake', destinationId: 7 },
+      { url: 'https://source.unsplash.com/800x600/?samosir,island', destinationId: 7 },
+
+      { url: 'https://source.unsplash.com/800x600/?bromo,volcano', destinationId: 8 },
+      { url: 'https://source.unsplash.com/800x600/?bromo,sunrise', destinationId: 8 },
+
+      { url: 'https://source.unsplash.com/800x600/?wakatobi,reef', destinationId: 9 },
+      { url: 'https://source.unsplash.com/800x600/?wakatobi,diving', destinationId: 9 },
+
+      { url: 'https://source.unsplash.com/800x600/?toraja,culture', destinationId: 10 },
+      { url: 'https://source.unsplash.com/800x600/?toraja,tradition', destinationId: 10 },
+
+      { url: 'https://source.unsplash.com/800x600/?belitung,beach', destinationId: 11 },
+      { url: 'https://source.unsplash.com/800x600/?belitung,granite', destinationId: 11 },
+
+      { url: 'https://source.unsplash.com/800x600/?derawan,island', destinationId: 12 },
+      { url: 'https://source.unsplash.com/800x600/?derawan,turtle', destinationId: 12 },
+
+      { url: 'https://source.unsplash.com/800x600/?ijen,bluefire', destinationId: 13 },
+      { url: 'https://source.unsplash.com/800x600/?ijen,crater', destinationId: 13 },
+
+      { url: 'https://source.unsplash.com/800x600/?manado,ocean', destinationId: 14 },
+      { url: 'https://source.unsplash.com/800x600/?bunaken,reef', destinationId: 14 },
+
+      { url: 'https://source.unsplash.com/800x600/?padang,beach', destinationId: 15 },
+      { url: 'https://source.unsplash.com/800x600/?padang,food', destinationId: 15 },
+
+      { url: 'https://source.unsplash.com/800x600/?bukittinggi,jamgadang', destinationId: 16 },
+      { url: 'https://source.unsplash.com/800x600/?bukittinggi,ngarai', destinationId: 16 },
+
+      { url: 'https://source.unsplash.com/800x600/?banyuwangi,pantai', destinationId: 17 },
+      { url: 'https://source.unsplash.com/800x600/?banyuwangi,kawahijen', destinationId: 17 },
+
+      { url: 'https://source.unsplash.com/800x600/?malang,waterfall', destinationId: 18 },
+      { url: 'https://source.unsplash.com/800x600/?malang,flowers', destinationId: 18 },
+
+      { url: 'https://source.unsplash.com/800x600/?makassar,losari', destinationId: 19 },
+      { url: 'https://source.unsplash.com/800x600/?makassar,rotterdam', destinationId: 19 },
+
+      { url: 'https://source.unsplash.com/800x600/?aceh,mosque', destinationId: 20 },
+      { url: 'https://source.unsplash.com/800x600/?aceh,tsunami', destinationId: 20 },
+
+      { url: 'https://source.unsplash.com/800x600/?karimunjawa,island', destinationId: 21 },
+      { url: 'https://source.unsplash.com/800x600/?karimunjawa,snorkeling', destinationId: 21 }
+    ]
+  });
 
   console.log('✅ Data destinasi berhasil dimasukkan');
 }

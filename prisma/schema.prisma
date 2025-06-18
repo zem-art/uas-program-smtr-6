@@ -14,6 +14,14 @@ model Destination {
   location    String
   climate     String
   description String
+  images      Image[]
+}
+
+model Image {
+  id            Int          @id @default(autoincrement())
+  url           String
+  destination   Destination  @relation(fields: [destinationId], references: [id])
+  destinationId Int
 }
 model Kontak {
   id       Int      @id @default(autoincrement())

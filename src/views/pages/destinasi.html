@@ -38,7 +38,7 @@
                 <p class="text-sm text-gray-600">📍 ${d.location}</p>
                 <p class="text-sm text-gray-600">🌤️ ${d.climate}</p>
                 <p class="text-sm mt-2 text-gray-700">${d.description.length > 100 ? `${d.description.substring(0,100)}...` : d.description}</p>
-                <a href="detail-destinasi.html?id=${d.id}" class="inline-block mt-3 text-primary font-medium hover:underline">Lihat Detail</a>
+                <a href="/detail/destination/${d.id}" class="inline-block mt-3 text-primary font-medium hover:underline">Lihat Detail</a>
               </div>
             </div>
           `).join('');

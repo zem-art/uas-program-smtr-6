@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Destinasi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <main class="p-6">
+    <h1 class="text-2xl font-bold" id="dest-name">Loading...</h1>
+    <p id="dest-desc" class="mt-2 text-gray-700"></p>
+    <div class="mt-4">
+      <p><strong>Iklim : </strong> <span id="dest-climate"></span></p>
+      <p><strong>Lokasi : </strong> <span id="dest-location"></span></p>
+    </div>
+    <div id="dest-images" class="mt-4 grid grid-cols-2 gap-2"></div>
+    <a href="/destination" class="mt-4 inline-block text-blue-600 hover:underline">Kembali</a>
+  </main>
+
+  <script>
+    const id = window.location.pathname.split('/').pop();
+
+    fetch(`/api/destinations/${id}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Gagal memuat data destinasi');
+        return res.json();
+      })
+      .then(data => {
+        document.title = `Detail ${data.name}`;
+        document.getElementById('dest-name').textContent = data.name;
+        document.getElementById('dest-desc').textContent = data.description;
+        document.getElementById('dest-climate').textContent = data.climate;
+        document.getElementById('dest-location').textContent = data.location;
+
+        const imgContainer = document.getElementById('dest-images');
+        if (Array.isArray(data.images)) {
+          data.images.forEach(img => {
+            const el = document.createElement('img');
+            el.src = img;
+            el.alt = data.name;
+            el.className = 'rounded';
+            imgContainer.appendChild(el);
+          });
+        }
+      })
+      .catch(err => {
+        document.getElementById('dest-name').textContent = 'Error';
+        document.getElementById('dest-desc').textContent = err.message;
+      });
+  </script>
+</body>
+</html>
