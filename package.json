@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn backend/src/server.ts",
+    "dev": "ts-node-dev --respawn src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma": "prisma",
     "seed" : "npx ts-node prisma/seed.ts",
+    "db:generate": "prisma generate",
     "db:studio" : "prisma studio"
   },
   "dependencies": {

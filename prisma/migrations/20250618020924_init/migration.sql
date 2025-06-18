@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "Kontak" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "nama" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "pesan" TEXT NOT NULL,
+    "tanggal" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
