@@ -8,7 +8,9 @@
 </head>
 <body class="bg-gray-100">
   <div class="max-w-md mx-auto mt-20 bg-white p-6 rounded shadow">
-    <h1 class="text-xl font-bold mb-4">Login Admin</h1>
+    <a href="/">
+      <h1 class="text-xl font-bold mb-4">Login Admin</h1>
+    </a>
     <form action="/api/login" method="POST">
       <label class="block mb-2">Username:
         <input type="text" name="username" class="w-full p-2 border rounded">
@@ -16,7 +18,7 @@
       <label class="block mb-2">Password:
         <input type="password" name="password" class="w-full p-2 border rounded">
       </label>
-      <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded w-full">Login</button>
+      <a href="/admin" type="bottom" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded w-full">Login</a>
     </form>
   </div>
 </body>
