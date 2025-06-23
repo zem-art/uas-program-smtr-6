@@ -29,6 +29,11 @@ pnpm run start
 * Website: https://mzaimzufar.my.id
 * Github: [@zem-art](https://github.com/zem-art)
 
+👤 **Zakirzky**
+
+* Website: https://github.com/Zakirzky
+* Github: [@Zakirzky](https://github.com/Zakirzky)
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
